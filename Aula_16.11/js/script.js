@@ -18,12 +18,20 @@ function criarBox(){
     
     if (count<qtdMax){
         const elem = document.createElement('div');
+        var ct = getCount();
         elem.setAttribute('class', 'box');
-        elem.textContent = getCount();
+        elem.setAttribute('id',ct);
+        elem.textContent = ct;
         document.body.appendChild(elem);
     }
     
     if (count==qtdMax){
         bttCriarBox.disabled = true;
     }
+}
+
+function removerBox(){
+    const idElemRem = parseInt(document.querySelector("#iptRem").value);
+    const elem = document.getElementById(idElemRem);
+    elem.remove();
 }
