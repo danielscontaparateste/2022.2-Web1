@@ -4,8 +4,8 @@ import fetch from 'node-fetch';
 
 async function getUser() {
   try {
-    // const response = await fetch('https://randomuser.me/api/');
-    const response = await fetch('http://127.0.0.1:5500/data.json');
+    const response = await fetch('https://randomuser.me/api/');
+    // const response = await fetch('http://127.0.0.1:5500/data.json');
 
     if (!response.ok) {
       throw new Error(`Error! status: ${response.status}`);
