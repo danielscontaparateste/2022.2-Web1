@@ -13,13 +13,17 @@ function getCount(){
 }
 
 function criarBox(){
-    const elem = document.createElement('div');
-    elem.setAttribute('class', 'box');
-
-    // elem.textContent = count;
-    // count++;
-
-    elem.textContent = getCount();
-
-    document.body.appendChild(elem);
+    const qtdMax =parseInt(document.querySelector("#iptMax").value);
+    const bttCriarBox = document.querySelector("#bttCriarBox");
+    
+    if (count<qtdMax){
+        const elem = document.createElement('div');
+        elem.setAttribute('class', 'box');
+        elem.textContent = getCount();
+        document.body.appendChild(elem);
+    }
+    
+    if (count==qtdMax){
+        bttCriarBox.disabled = true;
+    }
 }
