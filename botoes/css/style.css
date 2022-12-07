@@ -1,0 +1,9 @@
+.btts{
+    width: 100px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 10px;
+    float: left;
+    border-radius: 10px;
+    background-color: yellow;
+} 
